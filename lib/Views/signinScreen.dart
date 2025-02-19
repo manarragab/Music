@@ -151,16 +151,7 @@ class _SigninscreenState extends State<Signinscreen> {
                     child: MaterialButton(
                         onPressed: () async {
                           if (_formKey1.currentState!.validate()) {
-                            if (p == null) {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                backgroundColor: Colors.redAccent,
-                                content: Text(
-                                    'Unauthorized: SharedPreferences is not initialized'),
-                              ));
-                              Get.toNamed("signup");
-                              return;
-                            }
+                          
 
                             String? savedEmail = p!.getString("email");
                             String? savedPassword = p!.getString("password");
